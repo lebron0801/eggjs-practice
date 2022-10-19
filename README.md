@@ -9,7 +9,7 @@ see [egg docs][egg] for more detail.
 ### Desc
 
 ```
-第一次学习egg.js框架
+egg.js framework learning platform
 ```
 
 ### Development
