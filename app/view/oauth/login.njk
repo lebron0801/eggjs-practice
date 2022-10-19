@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OAuth Account Login Page</title>
+  <!-- Bootstrap CDN-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <h2 style="text-align: center; margin-top: 40px;">{{title}}</h2>
+  <!-- 用户点击「登录」按钮时，此页面发起 POST /connect/authorize?{{query}} 请求并获取授权码-->
+  <!-- 此时，会调用 OAuth 服务器实现的该路由接口，验证客户端和用户身份后，创建并返回授权码-->
+  <!-- app.all('/connect/authorize', app.oAuth2Server.authorize()); // 获取授权码-->
+  <!-- 此模式下，授权码会通过重定向 URL 返回给客户端-->
+  <div style="width: 30%; margin: 40px auto 0;">
+    <form action="/connect/authorize?{{query}}" method="post">
+      <div class="form-group">
+        <label for="username" class="sr-only">账号</label>
+        <input type="text" class="form-control" id="username" name='username' placeholder="账号" />
+      </div>
+      <div class="form-group">
+        <label for="password" class="sr-only">密码</label>
+        <input type="password" class="form-control" id="password" name='password' placeholder="密码" />
+      </div>
+      <button type="submit" class="btn btn-primary" style="width: 100%;">登录</button>
+    </form>
+  </div>
+
+</body>
+
+</html>

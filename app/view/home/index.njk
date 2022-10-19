@@ -1,0 +1,7 @@
+{% extends './base.njk' %}
+{% block body %}
+    <div class="custom">
+        <div>{{ name }}</div>
+        <div>{{ ctx.app.config.baseDir }}</div>
+    </div>
+{% endblock %}

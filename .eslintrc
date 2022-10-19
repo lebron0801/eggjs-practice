@@ -1,0 +1,8 @@
+{
+  "extends": "eslint-config-egg",
+  "rules": {
+    "jsdoc/check-tag-names": [{"definedTags":["router", "response"]}],
+    "no-unused-vars": "off",
+    "array-bracket-spacing": ["error", "never"]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "name": "nodejs-practice",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "egg": "^2.15.1",
+    "egg-cors": "^2.2.3",
+    "egg-mysql": "^3.0.0",
+    "egg-oauth2-server": "^2.2.6",
+    "egg-passport": "^2.1.1",
+    "egg-passport-yuque": "^1.1.0",
+    "egg-redis": "^2.4.0",
+    "egg-router-plus": "^2.0.0",
+    "egg-scripts": "^2.11.0",
+    "egg-sequelize": "^6.0.0",
+    "egg-snowflake": "^1.2.0",
+    "egg-socket.io": "^4.1.6",
+    "egg-swagger-doc": "^2.3.2",
+    "egg-tracer": "^1.1.0",
+    "egg-validate": "^2.0.2",
+    "egg-view-nunjucks": "^2.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "mysql2": "^2.2.5",
+    "node-uuid": "^1.4.8",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "cross-env": "^7.0.3",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "egg-sequelize-auto": "^0.1.1",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0",
+    "sequelize-cli": "^6.2.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --port=7001 --daemon --title=egg-server-example",
+    "stop": "egg-scripts stop --title=egg-server-example",
+    "dev": "egg-bin dev --env=local --port 7001 --sticky",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod",
+    "dbload": "egg-sequelize-auto -o ./app/models -h localhost -p 3306 -d oauth -u root -x coho -e mysql"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/lebron0801/egg-demo.git"
+  },
+  "author": "lebron",
+  "license": "MIT",
+  "_moduleAliases": {
+    "@root": ".",
+    "@app": "app"
+  }
+}
