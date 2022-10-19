@@ -1,5 +1,3 @@
-# example
-
 ## QuickStart
 
 <!-- add docs here for user -->
@@ -9,7 +7,7 @@ see [egg docs][egg] for more detail.
 ### Desc
 
 ```
-egg.js framework learning platform
+egg.js framework learning repo
 ```
 
 ### Development
